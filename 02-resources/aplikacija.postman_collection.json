@@ -1,0 +1,2521 @@
+{
+    "info": {
+        "_postman_id": "c27f0df9-b724-4094-9d20-d31edd3d491c",
+        "name": "aplikacija",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "Auth",
+            "item": [{
+                "name": "POST admin auth login",
+                "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                        "mode": "raw",
+                        "raw": "{\r\n    \"username\": \"Mihailo\",\r\n    \"password\": \"Mihailo123\"\r\n}",
+                        "options": {
+                            "raw": {
+                                "language": "json"
+                            }
+                        }
+                    },
+                    "url": {
+                        "raw": "{{URL_API}}/auth/administrator/login",
+                        "host": [
+                            "{{URL_API}}"
+                        ],
+                        "path": [
+                            "auth",
+                            "administrator",
+                            "login"
+                        ]
+                    }
+                },
+                "response": [{
+                    "name": "POST admin auth login",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"username\": \"Mihailo\",\r\n    \"password\": \"Mihailo123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/auth/administrator/login",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "administrator",
+                                "login"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [{
+                            "key": "X-Powered-By",
+                            "value": "Express"
+                        },
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json; charset=utf-8"
+                        },
+                        {
+                            "key": "Content-Length",
+                            "value": "1070"
+                        },
+                        {
+                            "key": "ETag",
+                            "value": "W/\"42e-39J/DPUr1yXMEqbN6TCj5+1t3pM\""
+                        },
+                        {
+                            "key": "Date",
+                            "value": "Mon, 13 Sep 2021 10:00:20 GMT"
+                        },
+                        {
+                            "key": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "key": "Keep-Alive",
+                            "value": "timeout=5"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n    \"authToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWRlbnRpdHkiOiJNYXJpamEiLCJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlhdCI6MTYzMDQwNDAyMCwiZXhwIjoxNjMxMDA4ODIwLCJpc3MiOiJsb2NhbGhvc3QifQ.K6c8uKeP9pYhUN6CSeIpBymQQavv5g-Bv96TaYd9yNXRl5lYIbVozjPpzFNSLYj6TG3NHvqFbQYdZPFmDwo2IMvFxg3ZhvNqYh8jkr_yqlpphD3wZWfFSjc_sJibGsqvxTcbq7n8MSBe63V8N_BrHtf5PUG1xFfoofiwPiN49-8mn31r28hCTqZYCOr7upOrRT6YM827pjc9Y1WyUfBuqLtQHGmeisamty6V7dFPdFGBKia3Pp0ZexbdXl5iUL9ImSfzhfR_Lzc1uoVwIil_HvJkUphgj4VMW-ZwdIjuKjm5Wc_3mQi_BVYkG7zUNINe4dWz4zk_g9R7k3lN5faNJg\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWRlbnRpdHkiOiJNYXJpamEiLCJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlhdCI6MTYzMDQwNDAyMCwiZXhwIjoxNjYxOTQwMDIwLCJpc3MiOiJsb2NhbGhvc3QifQ.NvuUml23iMZ4pPxOwL2ahqCoWaQr5M3Y4F47d1vVk71jixzBpnV-L5ad3GsKUj_dd3G2nwKpn7AkXDREVCYuhYaKbPCzCjiPntFRHUIqvbJGZevoqkLn9iKS_dOH6xWE1IXqZKA9bp90VOYt4RMhks5qltShUiEG42Ao2HSEpC6yvOIBdDcgWwwiLK9QJCf05InmExaa7fy-JrS2oU_CO7Ry-h9UpYMv2KnZ_hfg7RdmRoiVTwg2mBgq-06L3KSdy0q9jDJNVpG162iiLShuG04AYkCmuIJcywr7krlMD3zfgFe0YAqTE-AIvVxY_fFBctl57ZMT85kq2vZdWrD0ug\"\n}"
+                }]
+            }]
+        },
+        {
+            "name": "Administrator",
+            "item": [{
+                    "name": "GET all administrators",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/administrator/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "administrator",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all administrators",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/administrator/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "administrator",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "244"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"f4-Oj6bapKtCedOW5shsooLIDUHwC4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:03:33 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"Mihailo\",\n        \"passwordHash\": \"$2b$11$O7easSMGuRIf1TRm7l77YOZlFGTfQGXz/WI20ZEMe/ebrBA0.q3YS\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"Kosta\",\n        \"passwordHash\": \"$2b$11$icNVIIcTwcILkxdEXHJNKOn4/jliQSnkj93DpX6rtL7/kNnFkvieG\"\n    }\n]"
+                    }]
+                },
+                {
+                    "name": "GET single administrator by id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/administrator/1",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "administrator",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET single administrator by id",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/administrator/1",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "administrator",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "122"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"7a-n9xaZ9/vErr4SNREfpxN6wdgXwE\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:04:11 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"administratorId\": 1,\n    \"username\": \"Mihailo\",\n    \"passwordHash\": \"$2b$11$O7easSMGuRIf1TRm7l77YOZlFGTfQGXz/WI20ZEMe/ebrBA0.q3YS\"\n}"
+                    }]
+                },
+                {
+                    "name": "POST add new administrator",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"username\": \"Nena\",\r\n    \"password\": \"Password123!@#\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/administrator/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "administrator",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "POST add new administrator",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"username\": \"Nena\",\r\n    \"password\": \"Password123!@#\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/administrator/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "administrator",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "117"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"75-WqF2tF/d364+qmyNWIQ6b5/Hk64\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:05:48 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"administratorId\": 4,\n    \"username\": \"Nena\",\n    \"passwordHash\": \"$2b$11$lYkw3WEurJjAewRPlzNyzemWCrsJzZuqvIisP1G8xdHffs.8.qvBS\"\n}"
+                    }]
+                },
+                {
+                    "name": "PUT edit an administrator by id",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"username\": \"NENA\",\r\n    \"password\": \"LOZINKA123!@#\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/administrator/4",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "administrator",
+                                "4"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "PUT edit an administrator by id",
+                        "originalRequest": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"username\": \"NENA\",\r\n    \"password\": \"LOZINKA123!@#\"\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/administrator/4",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "administrator",
+                                    "4"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "117"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"75-+ZjTtIAU5k7H7vfPeff5Xi90do4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:07:37 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"administratorId\": 4,\n    \"username\": \"NENA\",\n    \"passwordHash\": \"$2b$11$baH6nMhInCPSb2Vrs8.3SuiG.gjo0dOMVjBe/3QIgzKuevhq1388W\"\n}"
+                    }]
+                },
+                {
+                    "name": "DELETE administrator by id",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/administrator/4",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "administrator",
+                                "4"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "DELETE administrator by id",
+                        "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/administrator/4",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "administrator",
+                                    "4"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "51"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:13:23 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+                    }]
+                },
+                {
+                    "name": "GET all login logs",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/login-log",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "login-log"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all login logs",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/login-log/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "login-log",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "464"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1d0-b7VMTcCpWQoEyAcjKBfoaPFMBYs\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:08:58 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"login_log_id\": 1,\n        \"log\": \"Unknown password :NaN\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-09-12T18:21:27.000Z\"\n    },\n    {\n        \"login_log_id\": 3,\n        \"log\": \"Unknown username: nek\",\n        \"administrator_id\": null,\n        \"created_at\": \"2021-09-12T18:22:49.000Z\"\n    },\n    {\n        \"login_log_id\": 28,\n        \"log\": \"Unknown password: dasdas\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-09-12T22:50:28.000Z\"\n    },\n    {\n        \"login_log_id\": 29,\n        \"log\": \"Unknown username: NaN\",\n        \"administrator_id\": null,\n        \"created_at\": \"2021-09-12T22:53:22.000Z\"\n    }\n]"
+                    }]
+                },
+                {
+                    "name": "GET login logs by admin id",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/login-log/1",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "login-log",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all login logs Copy",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/login-log/1",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "login-log",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "230"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"e6-+blRrkxwJNpKB/Y75pH1DysU+bI\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:11:08 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"login_log_id\": 1,\n        \"log\": \"Unknown password :adfasdf\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-09-12T18:21:27.000Z\"\n    },\n    {\n        \"login_log_id\": 28,\n        \"log\": \"Unknown password: asdfasdfasdf\",\n        \"administrator_id\": 1,\n        \"created_at\": \"2021-09-12T22:50:28.000Z\"\n    }\n]"
+                    }]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [{
+                    "key": "token",
+                    "value": "{{AUTH_ADMINISTRATOR}}",
+                    "type": "string"
+                }]
+            },
+            "event": [{
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Artist",
+            "item": [{
+                    "name": "GET all artist",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/artist/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "artist",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all artist",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/artist/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "artist",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "1768"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"6e8-JLITZVPExeI4LqFMXGfbpt0ENlQ\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Tue, 12 Sep 2021 10:14:37 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"artistId\": 1,\n        \"artistName\": \"Toma Zdravkovic\",\n        \"artistName\": Zan Klod Van Dam,\n        \"artistId\": 3,\n        \"artistName\": \"Saban Saulic\",\n       \"categoryId\": 4,\n        \"artistName\": \"Dragana Mirkovic\",\n}]"
+                    }]
+                },
+                {
+                    "name": "GET artist by id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/artist/2",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "artist",
+                                "2"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET artist by id",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/artist/2",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "artist",
+                                    "2"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "461"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1cd-b+9vSsuZqAbLazSK2dI+dzJJGAs\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:15:24 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"artistId\": 1,\n        \"artistName\": \"Toma Zdravkovic\",\n    \"artistId\": 2,\n    \"artistName\": Zan Klod Van Dam,\n        \"artistId\": 3,\n        \"artistName\": \"Saban Saulic\",\n       \"artistId\": 4,\n        \"artistName\": \"Dragana Mirkovic\",\n}]"
+                    }]
+                },
+                {
+                    "name": "POST add new artist",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"artistName\": \"Lepa Lukic\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/artist",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "artist"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "POST add new artist",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"artistName\": \"Nikola Jokic\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/artist",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "artist"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "89"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"59-YjrDkRrFHvPuGZzgWo2044SWa3w\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:17:17 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"artistId\": 6,\n    \"artistName\": \"Cune Gojkovic\",\n    }"
+                    }]
+                },
+                {
+                    "name": "PUT edit artist by id",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"artistName\": \"Lepa Brena\",\r\n    }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/artist/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "artist",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "PUT edit artist by id",
+                        "originalRequest": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"artistName\": \"Usnija Redzepova\",\r\n    }",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/artist/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "artist",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "92"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"5c-f11ihh5vKqYZvNHNMwNhs+iQFfU\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:19:27 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"artistId\": 6,\n    \"artistName\": \"Cune Gojkovic\",\n   }"
+                    }]
+                },
+                {
+                    "name": "DELETE artist by id",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"artistName\": \"Cune Gojkovic\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/artist/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "artist",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "DELETE artist by id",
+                        "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"artistName\": \"Cune Gojkovic\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/artist/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "artist",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "51"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 10:20:12 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+                    }]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [{
+                    "key": "token",
+                    "value": "{{AUTH_ADMINISTRATOR}}",
+                    "type": "string"
+                }]
+            },
+            "event": [{
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Author",
+            "item": [{
+                    "name": "GET all authors",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/author/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "author",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all authors",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/author/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "author",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "2406"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"966-hjZ2CuBow4vsKg+ONWy+mJng3WY\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:02:36 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"authorId\": 1,\n        \"authorName\": \"Filip Visnjic\",\n        \"authorId\": 2,\n        \"authorName\": \"Ivo Andric\",\n        \"authorId\": 3,\n        \"authorName\": \"Jovan Ducic\",\n        \"authorId\": 4,\n        \"authorName\": \"Laza Kostic\",\n        \"authorId\": 5,\n        \"name\": \"Jovan Jovanovic Zmaj\",\n        }\n]"
+                    }]
+                },
+                {
+                    "name": "GET author by id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/author/1",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "author",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET author by id",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/author/1",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "author",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "89"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"59-tbG5bmv2ifPph5G1t1FGdj9Rti4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:02:55 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"authorId\": 1,\n    \"authorName\": \"Filip Visnjic\",\n  }"
+                    }]
+                },
+                {
+                    "name": "POST add new author",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"authorName\": \"Zeljko Joksimovic \",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/author/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "author",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "POST add new author",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"authorName\": \"Zeljko Joksimovic \",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/author/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "author",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "440"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1b8-+65xuPnn4ym0OtDH4stdkUn+fWE\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:04:55 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"authorId\": 6,\n    \"authorName\": \"Zeljko Joksimovic\",\n    \n}"
+                    }]
+                },
+                {
+                    "name": "PUT edit author by id",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"authorName\": \"Zeljko Joksimovic \",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/author/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "author",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "PUT edit author by id",
+                        "originalRequest": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"authorName\": \"Zeljko Joksimovic \",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/author/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "author",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "470"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1d6-GhxGtuwa2aBgGjRpv6q6aqXEntA\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:06:27 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"authorId\": 6,\n    \"authorName\": \"Zeljko Joksimovici\",\n    \n}"
+                    }]
+                },
+                {
+                    "name": "DELETE author by id",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"authorName\": \"Zeljko Joksimovici\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/author/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "author",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "DELETE author by id",
+                        "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"authorName\": \"Zeljko Joksimovici\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/author/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "author",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "51"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:07:00 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+                    }]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [{
+                    "key": "token",
+                    "value": "{{AUTH_ADMINISTRATOR}}",
+                    "type": "string"
+                }]
+            },
+            "event": [{
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Genre",
+            "item": [{
+                    "name": "GET all genres",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/genre/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "genre",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all genres",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/genre/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "genre",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "2406"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"966-hjZ2CuBow4vsKg+ONWy+mJng3WY\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:02:36 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"genreId\": 1,\n        \"genreName\": \"pop\",\n        \"genreId\": 2,\n        \"genreName\": \"rok\",\n        \"genreId\": 3,\n        \"genreName\": \"punk rock\",\n        \"genreId\": 4,\n        \"genreName\": \"classic\",\n        \"genreId\": 5,\n        \"name\": \"hard rock\",\n        }\n]"
+                    }]
+                },
+                {
+                    "name": "GET genre by id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/genre/1",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "genre",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET genre by id",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/genre/1",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "genre",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "89"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"59-tbG5bmv2ifPph5G1t1FGdj9Rti4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:02:55 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"genreId\": 1,\n    \"genreName\": \"pop\",\n  }"
+                    }]
+                },
+                {
+                    "name": "POST add new genre",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"genreName\": \"punk\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/genre/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "genre",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "POST add new genre",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"genreName\": \"punk\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/genre/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "genre",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "440"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1b8-+65xuPnn4ym0OtDH4stdkUn+fWE\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:04:55 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"genreId\": 6,\n    \"genreName\": \"punk\",\n    \n}"
+                    }]
+                },
+                {
+                    "name": "PUT edit genre by id",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"genreName\": \"punk\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/genre/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "genre",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "PUT edit genre by id",
+                        "originalRequest": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"genreName\": \"punk\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/genre/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "genre",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "470"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1d6-GhxGtuwa2aBgGjRpv6q6aqXEntA\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:06:27 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"genreId\": 6,\n    \"genreName\": \"punk\",\n    \n}"
+                    }]
+                },
+                {
+                    "name": "DELETE genre by id",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"genreName\": \"punk\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/genre/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "genre",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "DELETE genre by id",
+                        "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"genreName\": \"punk\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/genre/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "genre",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "51"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:07:00 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+                    }]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [{
+                    "key": "token",
+                    "value": "{{AUTH_ADMINISTRATOR}}",
+                    "type": "string"
+                }]
+            },
+            "event": [{
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Song",
+            "item": [{
+                    "name": "GET all songs",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/song/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "song",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET all songs",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/song/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "song",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "2406"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"966-hjZ2CuBow4vsKg+ONWy+mJng3WY\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:02:36 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "[\n    {\n        \"songId\": 1,\n        \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n        \"songId\": 2,\n        \"genreId\": 2,\n        \"artistId\": 2,\n        \"authorId\": 2,\n        \"songName\": \"last day\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n        \"songId\": 3,\n        \"genreId\": 3,\n        \"artistId\": 3,\n        \"authorId\": 3,\n        \"songName\": \"tomorow is today\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n        \"songId\": 4,\n        \"genreId\": 4,\n        \"artistId\": 4,\n        \"authorId\": 4,\n        \"songName\": \"lorem ipsum\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n        \"songId\": 5,\n        \"genreId\": 5,\n        \"artistId\": 5,\n        \"authorId\": 5,\n        \"songName\": \"pukni zoro\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n              }\n]"
+                    }]
+                },
+                {
+                    "name": "GET song by id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{URL_API}}/song/1",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "song",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "GET song by id",
+                        "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{URL_API}}/song/1",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "song",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "89"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"59-tbG5bmv2ifPph5G1t1FGdj9Rti4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:02:55 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"songId\": 1,\n        \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n}"
+                    }]
+                },
+                {
+                    "name": "POST add new song",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/song/",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "song",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "POST add new song",
+                        "originalRequest": {
+                            "method": "POST",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/song/",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "song",
+                                    ""
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "440"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1b8-+65xuPnn4ym0OtDH4stdkUn+fWE\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:04:55 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"songId\": 6,\n        \"genreId\": 6,\n        \"artistId\": 6,\n        \"authorId\": 6,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n}"
+                    }]
+                },
+                {
+                    "name": "PUT edit song by id",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/song/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "song",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "PUT edit song by id",
+                        "originalRequest": {
+                            "method": "PUT",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/song/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "song",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "470"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"1d6-GhxGtuwa2aBgGjRpv6q6aqXEntA\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:06:27 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"songId\": 6,\n        \"genreId\": 6,\n        \"artistId\": 6,\n        \"authorId\": 6,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\n}"
+                    }]
+                },
+                {
+                    "name": "DELETE song by id",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{URL_API}}/song/6",
+                            "host": [
+                                "{{URL_API}}"
+                            ],
+                            "path": [
+                                "song",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": [{
+                        "name": "DELETE song by id",
+                        "originalRequest": {
+                            "method": "DELETE",
+                            "header": [],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\r\n    \"genreId\": 1,\n        \"artistId\": 1,\n        \"authorId\": 1,\n        \"songName\": \"9 sonata\",\n        \"songText\": \"lorem ipsum dolore sit amet\",\r\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{URL_API}}/song/6",
+                                "host": [
+                                    "{{URL_API}}"
+                                ],
+                                "path": [
+                                    "song",
+                                    "6"
+                                ]
+                            }
+                        },
+                        "status": "OK",
+                        "code": 200,
+                        "_postman_previewlanguage": "json",
+                        "header": [{
+                                "key": "X-Powered-By",
+                                "value": "Express"
+                            },
+                            {
+                                "key": "Access-Control-Allow-Origin",
+                                "value": "*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json; charset=utf-8"
+                            },
+                            {
+                                "key": "Content-Length",
+                                "value": "51"
+                            },
+                            {
+                                "key": "ETag",
+                                "value": "W/\"33-+/zHhg+84sQie8xvQmB03Ijwjc4\""
+                            },
+                            {
+                                "key": "Date",
+                                "value": "Mon, 13 Sep 2021 11:07:00 GMT"
+                            },
+                            {
+                                "key": "Connection",
+                                "value": "keep-alive"
+                            },
+                            {
+                                "key": "Keep-Alive",
+                                "value": "timeout=5"
+                            }
+                        ],
+                        "cookie": [],
+                        "body": "{\n    \"errorCode\": 0,\n    \"errorMessage\": \"Deleted 1 records.\"\n}"
+                    }]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [{
+                    "key": "token",
+                    "value": "{{AUTH_ADMINISTRATOR}}",
+                    "type": "string"
+                }]
+            },
+            "event": [{
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "event": [{
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [{
+            "key": "URL_API",
+            "value": "localhost:40080"
+        },
+        {
+            "key": "AUTH_ADMINISTRATOR",
+            "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWRlbnRpdHkiOiJNYXJpamEiLCJyb2xlIjoiYWRtaW5pc3RyYXRvciIsImlhdCI6MTYzMDQwNDAyMCwiZXhwIjoxNjMxMDA4ODIwLCJpc3MiOiJsb2NhbGhvc3QifQ.K6c8uKeP9pYhUN6CSeIpBymQQavv5g-Bv96TaYd9yNXRl5lYIbVozjPpzFNSLYj6TG3NHvqFbQYdZPFmDwo2IMvFxg3ZhvNqYh8jkr_yqlpphD3wZWfFSjc_sJibGsqvxTcbq7n8MSBe63V8N_BrHtf5PUG1xFfoofiwPiN49-8mn31r28hCTqZYCOr7upOrRT6YM827pjc9Y1WyUfBuqLtQHGmeisamty6V7dFPdFGBKia3Pp0ZexbdXl5iUL9ImSfzhfR_Lzc1uoVwIil_HvJkUphgj4VMW-ZwdIjuKjm5Wc_3mQi_BVYkG7zUNINe4dWz4zk_g9R7k3lN5faNJg"
+        }
+    ]
+}
